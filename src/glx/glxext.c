@@ -800,7 +800,7 @@ AllocAndFetchScreenConfigs(Display * dpy, struct glx_display * priv, Bool zink, 
 
 #if defined(GLX_USE_APPLE)
       if (psc == NULL && priv->driswDisplay) {
-         psc = priv->driswDisplay->createScreen(i, priv);
+         psc = priv->driswDisplay->createScreen(i, priv, driver_name_is_inferred);
       }
 #endif
 
